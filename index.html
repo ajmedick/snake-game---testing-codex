@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Snake</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <h1>Snake</h1>
+        <div class="score">
+          <span>Score:</span>
+          <span id="scoreValue">0</span>
+        </div>
+      </header>
+
+      <section class="board">
+        <canvas id="gameCanvas" width="400" height="400" aria-label="Snake game board"></canvas>
+        <div id="statusOverlay" class="overlay" aria-live="polite" hidden>
+          <div class="overlay-content">
+            <p id="statusText">Game Over</p>
+            <button id="restartBtn" class="btn">Restart</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="controls">
+        <button id="pauseBtn" class="btn" type="button">Pause</button>
+        <button id="resetBtn" class="btn" type="button">Restart</button>
+      </section>
+
+      <section class="touch-controls" aria-label="On-screen controls">
+        <div class="touch-row">
+          <button class="btn dir" data-dir="up" aria-label="Up">Up</button>
+        </div>
+        <div class="touch-row">
+          <button class="btn dir" data-dir="left" aria-label="Left">Left</button>
+          <button class="btn dir" data-dir="down" aria-label="Down">Down</button>
+          <button class="btn dir" data-dir="right" aria-label="Right">Right</button>
+        </div>
+      </section>
+
+      <footer class="hint">
+        <span>Controls: Arrow Keys / WASD. Space to pause.</span>
+      </footer>
+    </main>
+
+    <script src="snake.js"></script>
+  </body>
+</html>
