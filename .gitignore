@@ -1,0 +1,10 @@
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Generic env text files
+env.txt
+
+# Local secrets (keep examples tracked)
+*.env.local
